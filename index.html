@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    
+    <section class="container-new-task" id="container_new_task">
+        <div class="container">
+            <h2 class="task-new-title">Nueva tarea</h2>
+
+            <hr class="hr-task">
+            
+            <form class="form" id='form'>
+                <label for="title">Titulo de la tarea</label>
+                <input type="text" id="title">
+            </form>
+            
+            <div class="btn-option">
+                <div class="container-btn">
+                    <button  class='btn close' id="close">Cerrar</button>
+                    <button class='btn save' id="save">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <header class="header">
+        <div class="container-header">
+            <h1 class="title">Note</h1>
+        </div>    
+    </header>
+    
+    
+    
+    <section class="note">
+
+        <section class="note-items">
+            <div class="task">
+                <div class="task-title">
+                    <h3>Recoger mazorcas</h3>
+                </div>
+                <hr class="hr"/>
+                <div class="all-tasks">
+                    <div class="item">
+                        <input type="checkbox" id="task1">
+                        <label for="task1">Recoger todas las mazorcas</label>
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" id="task2">
+                        <label for="task2">Almacenar las mazorcas </label>
+                    </div>
+                </div>
+                <hr class="hr"/>
+                <div class="option-task">
+                    <button class="btn-task red"><ion-icon class="btn-icon" name="trash-sharp"></ion-icon></button>
+                    <button class="btn-task green"><ion-icon class="btn-icon" name="create-sharp"></ion-icon></button>
+                </div>
+            </div>
+
+            <div class="container-btn-new">
+                <button class="new-task" id="new_task"> <ion-icon class="add" name="add-outline"></ion-icon> <p>Nueva tarea</p></button>
+            </div>
+
+        </section>
+    </section>
+    
+
+
+    <!-- Scripts -->
+    <script src="./js/index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
