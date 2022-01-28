@@ -83,6 +83,14 @@
     display: inline;
 }
 
+.title-input {
+    padding: 2px 0 2px 10px;
+    margin-left: 10px;
+    border: 2px solid var(--color-primary);
+    outline: none;
+    border-radius: 6px;
+}
+
 .btn {
     padding: 6px 6px;
     border: none;
@@ -93,23 +101,40 @@
     margin: 5px;
 }
 
- .close {
+.close {
     background-color: #FF0000;
- }
+}
 
- .close:hover {
+.close:hover {
     background-color: #cc0000;
- }
+}
 
- .save {
+.save {
     background-color: #36c40b;
- }
+}
 
- .save:hover {
+.save:hover {
     background-color: #2b9d09;
- }
+}
 
+.btn-add {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+}
 
+.new-option {
+    color: #000;
+    background-color: #e6e6e6;
+}
+
+.new-option:hover {
+    background-color: #cccccc;
+}
+
+.new-add {
+    color: #000;
+}
 
 /* NOTE  */
 .note {
