@@ -74,6 +74,29 @@
     margin: 10px;
 }
 
+.container_input {
+    display: flex;
+    flex-direction: column;
+}
+
+.style_input {
+    /* border-left: 2px solid var(--color-primary); */
+    margin: 5px;
+    padding: 2px 0 2px 10px;
+}
+
+.container_textarea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.style_textarea {
+    margin: 5px 0;
+    resize: none;
+    padding: 2px 10px 2px 10px;
+}
+
 .btn-option {
     margin: 10px;
 }
