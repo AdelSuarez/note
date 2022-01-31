@@ -1,4 +1,4 @@
-import { open, close } from "./modelWin.js";
+import { open, close } from "./popupOptions.js";
 
 const btnOpen = document.getElementById('new_task');
 const containerNewTask = document.getElementById('container_new_task');
@@ -7,22 +7,42 @@ const taskForm = document.getElementById('form');
 const btnSave = document.getElementById('save');
 const btnNewCheckbox = document.getElementById('new-checkbox');
 const btnNewNote = document.getElementById('new-note');
+const containerInput = document.getElementById('container_input');
+const containerTextArea = document.getElementById('container_textarea');
+let contadorTextArea = 0;
 
 open( btnOpen, containerNewTask );
 close( btnClose, containerNewTask );
 
 btnNewCheckbox.onclick = () => {
-    alert('new checkbox');
+    const checkbox = document.createElement('input');
+
+    checkbox.classList.add('style_input');
+
+    containerInput.appendChild(checkbox);
 }
+
 
 btnNewNote.onclick = () => {
-    alert('new note');
-}
+    
+    if (contadorTextArea === 0){
+        const textArea = document.createElement('textarea');
 
+        textArea.classList.add('style_textarea');
+        textArea.setAttribute('cols', '40');
+        textArea.setAttribute('rows', '6');
+    
+        containerTextArea.appendChild(textArea);
+        contadorTextArea = 1;
+        
+    }
+}
 
 
 btnSave.onclick = () => {
-    console.log(taskForm['title'].value);
+    alert(taskForm['title'].value);
     taskForm.reset();
+    contadorTextArea = 0;
+    
 }
 
