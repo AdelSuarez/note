@@ -1,5 +1,4 @@
-import { open, close } from "./popupOptions.js";
-
+// CONSTS
 const btnOpen = document.getElementById('new_task');
 const containerNewTask = document.getElementById('container_new_task');
 const btnClose = document.getElementById('close');
@@ -9,17 +8,39 @@ const btnNewCheckbox = document.getElementById('new-checkbox');
 const btnNewNote = document.getElementById('new-note');
 const containerInput = document.getElementById('container_input');
 const containerTextArea = document.getElementById('container_textarea');
+
 let contadorTextArea = 0;
 
-open( btnOpen, containerNewTask );
-close( btnClose, containerNewTask );
+
+// FUNCTIONS POPUP
+
+btnOpen.onclick = () => {
+    containerNewTask.classList.add('show');
+}
+
+btnClose.onclick = () => {
+    containerNewTask.classList.remove('show');
+    deleteComponent(containerInput);
+    deleteComponent(containerTextArea);
+    contadorTextArea = 0;
+}
+
+
+function deleteComponent(componenet) {
+    while (componenet.firstChild) {
+        componenet.removeChild(componenet.firstChild);
+    }
+}
+
+
+// ADD COMPONENT
 
 btnNewCheckbox.onclick = () => {
-    const checkbox = document.createElement('input');
+    const input = document.createElement('input');
 
-    checkbox.classList.add('style_input');
+    input.classList.add('style_input');
 
-    containerInput.appendChild(checkbox);
+    containerInput.appendChild(input);
 }
 
 
@@ -43,6 +64,5 @@ btnSave.onclick = () => {
     alert(taskForm['title'].value);
     taskForm.reset();
     contadorTextArea = 0;
-    
-}
 
+}
